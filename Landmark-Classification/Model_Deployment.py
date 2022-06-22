@@ -122,9 +122,9 @@ def default_weight_init(m):
         m.reset_parameters()
 
 
-def Train_the_model(num_epochs):
+def Train_the_model(num_epochs=5):
     global model_scratch
-    num_epochs = 3
+
     model_scratch.apply(default_weight_init)
     # train the model
     model_scratch = train(num_epochs, loaders_scratch, model_scratch, get_optimizer_scratch(model_scratch),
